@@ -287,3 +287,6 @@ tick_positions = [0, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000]
 plt.xticks(tick_positions, rotation=45, ha='right')
 plt.show()
 
+## Removal of Additional Columns
+
+This project was focused on increasing property value for homeowners though factors that homeowners could control. Consequently there were columns in the dataset such as Latitude, longitude, date, year built, year renovated, greenbelt, view, and waterfront, that were unrelated to this objective and therefor removed. 
