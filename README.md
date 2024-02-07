@@ -277,7 +277,7 @@ Dummy variables or binary variables were created for each of the categorical var
 
 ## Search and Removal of Outliers
 
-Utilizing Pandas, descriptive statistics were generated for each numeric variable to gain insights into their distributions and identify outliers. Based on these statistics, reasonable parameters were established, and outliers were subsequently removed from the dataset. Visualization of key statistical parameters such as the mean, standard deviation, and interquartile range was achieved using the Matplotlib library. This comprehensive approach ensured a thorough investigation of the data and facilitated informed decision-making in outlier handling. The bellow is an example of a visualiztion used to set outlier parameters for 'sqft_above'. Using the graph, as well as the discriptive statistics, the lower limit was set to 800 Sqft, and the upper limit was set to 3500 Sqft. Any data points falling outside of this range were determined to be outliers. 
+Utilizing Pandas, descriptive statistics were generated for each numeric variable to gain insights into their distributions and identify outliers. Based on these statistics, reasonable parameters were established, and outliers were subsequently removed from the dataset. Visualization of key statistical parameters such as the mean, standard deviation, and interquartile range was achieved using the Matplotlib library. This comprehensive approach ensured a thorough investigation of the data and facilitated informed decision-making in outlier handling. The below is an example of a visualiztion used to set outlier parameters for 'sqft_above'. Using the graph, as well as the discriptive statistics, the lower limit was set to 800 Sqft, and the upper limit was set to 3500 Sqft. Any data points falling outside of this range were determined to be outliers. 
 
 ![Screen Shot 2024-02-07 at 3 06 03 PM](https://github.com/jguzzo522/project2house/assets/75549456/1ae0140f-aecd-49d4-9651-2554c9d68ea7)
 
@@ -289,4 +289,15 @@ plt.show()
 
 ## Removal of Additional Columns
 
-This project was focused on increasing property value for homeowners though factors that homeowners could control. Consequently there were columns in the dataset such as Latitude, longitude, date, year built, year renovated, greenbelt, view, and waterfront, that were unrelated to this objective and therefor removed. 
+This project was focused on increasing property value for homeowners though factors that homeowners could control. Consequently there were columns in the dataset such as Latitude, longitude, date, year built, year renovated, greenbelt, view, and waterfront, that were unrelated to this objective and therefore removed. 
+
+## First Model Created Using StatsModels
+
+Utilizing StatsModels, a Multiple Linear Regression model was constructed to explore the relationship between various predictor variables and the target variable, which was set to Price. Multiple Linear Regression is a statistical technique used to analyze the relationship between multiple independent variables and a single dependent variable.
+
+The initial model accounted for approximately 39% of the variance in Price, suggesting a moderate level of explanatory power. There were many p-values associated with the coefficients that were statistically significant predictors (p < 0.05), indicating variables that have a significant effect on Price.
+
+The coefficients in the model represent the estimated change in Price for a one-unit change in the respective predictor variable. Interpretation of these coefficients provides insights into the direction and magnitude of the relationship between predictors and Price.
+
+After creating the initial model, a Tornado chart was generated to illustrate the influence of each coefficient on the house price. The chart reveals that an increase in the value of the variable 'grade_11 Excellent' has the most substantial positive effect on the price, indicating that houses with this grade experience a considerable price increase. Conversely, the presence of 'grade_4 Low' has the most pronounced negative impact on the price, suggesting that houses with this grade exhibit a substantial decrease in value. This visual representation underscores the importance of certain factors in determining house prices and provides valuable insights for homeowners.
+![Screen Shot 2024-02-07 at 3 34 10 PM](https://github.com/jguzzo522/project2house/assets/75549456/97663077-fcfc-4f8a-92a0-a591525329f2)
