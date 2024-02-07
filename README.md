@@ -1,7 +1,7 @@
 # Increasing Property Value for Homeowners
 
 ## Goal
-This project is aimed at increasing property value for homeowners. The measurement used to determine if property value was increased, was price. The data indicates that house grade, and the number of bathrooms are metrics that can be used to increase property value. 
+This project is aimed at increasing property value for homeowners for the purpose of resale value. The measurement used to determine if property value was increased, was price. The data indicates that house grade, and the number of bathrooms are metrics that can be used to increase property value. 
 
 ## Data
 This project used data from a data set called ‘kc_house_data’. PANDAS was used to import this dataset into Jupyter notebook. In this dataset there were twenty three columns. The information in these columns are provided below.
@@ -118,4 +118,12 @@ This project used data from a data set called ‘kc_house_data’. PANDAS was us
 </body>
 </html>
 
-This data was anaylized using many diffrent packages in python such as 'Statsmodels', 'PANDAS', 'NUMPY', 'OS', 'MATPLOTLIB', 'SEABORN', and 'ARIMA'
+This data was analyzed, modeled, manipulated, computed, visualized, and plotted using many different library packages in python such as 'Statsmodels', 'PANDAS', 'NUMPY', 'OS', 'MATPLOTLIB', 'SEABORN', ‘SKLEARN, 'SPICY' and 'ARIMA'.
+
+## Cleaning the Data
+In this dataset there were a few columns that had duplicate values, or missing values. In order to properly analyze this dataset these rows were removed from the original dataset. Pre-cleaned data had 30,155 rows, after removing the missing or duplicate values, the dataset had 30,110 rows remaining. 
+
+### Creating Dummy Variables for Categorical Data
+In this project, several categorical variables such as 'condition', 'heat_source', 'renovation_status', 'grade', 'nuisance', and 'sewer_system' were present in the dataset. Statistical models typically require numerical input for interpretation and analysis. Therefore, in order to incorporate these categorical variables into the modeling process effectively, dummy variables were created using PANDAS. 
+
+Dummy variables or binary variables were created for each of the categorical variables. These converted variables allows for statistical models to process the data appropriately, and allows for the user to make interpretation of the data's effect on the price of the home. 
