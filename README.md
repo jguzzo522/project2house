@@ -301,3 +301,10 @@ The coefficients in the model represent the estimated change in Price for a one-
 
 After creating the initial model, a Tornado chart was generated through Matplotlib,to illustrate the influence of each coefficient on the house price. The chart reveals that an increase in the value of the variable 'grade_11 Excellent' has the most substantial positive effect on the price, indicating that houses with this grade experience a considerable price increase. Conversely, the presence of 'grade_4 Low' has the most pronounced negative impact on the price, suggesting that houses with this grade exhibit a substantial decrease in value. This visual representation underscores the importance of certain factors in determining house prices and provides valuable insights for homeowners.
 ![Screen Shot 2024-02-07 at 3 34 10 PM](https://github.com/jguzzo522/project2house/assets/75549456/97663077-fcfc-4f8a-92a0-a591525329f2)
+
+## Second Model Created Using StatsModels
+
+In an effort to create a more impactful and statistically significant model, a second model was created using only the significant data (p<0.05) from the inital model. However, after running the second model through Multiple Linear Regression, the chart indicated that the model only accounted for 38% of the variance. The first model accounted for 39% of all variance, indicating that this model explains 1% kess of the variance in price. 
+
+A Tornado chart was created for the second model, to visualize the impact of each coefficient on the price of the house. Echoing the findings to the frist model, this model indicates that grade_11 and grade_12 have the highest impact on price. While grade_4, and grade_5, demonstrated the most pronounced adverse effects on price outcomes. The major diffrences between the two Models as demenstrated by the Tornado charts, are that there are less coefficents because they were removed becasue their p value was higher than p<0.05. 
+![Screen Shot 2024-02-07 at 4 01 35 PM](https://github.com/jguzzo522/project2house/assets/75549456/9966999a-daac-4ee6-b791-a77f64653c4b)
