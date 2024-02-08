@@ -302,6 +302,11 @@ The coefficients in the model represent the estimated change in Price for a one-
 After creating the initial model, a Tornado chart was generated through Matplotlib,to illustrate the influence of each coefficient on the house price. The chart reveals that an increase in the value of the variable 'grade_11 Excellent' has the most substantial positive effect on the price, indicating that houses with this grade experience a considerable price increase. Conversely, the presence of 'grade_4 Low' has the most pronounced negative impact on the price, suggesting that houses with this grade exhibit a substantial decrease in value. This visual representation underscores the importance of certain factors in determining house prices and provides valuable insights for homeowners.
 ![Screen Shot 2024-02-07 at 3 34 10 PM](https://github.com/jguzzo522/project2house/assets/75549456/97663077-fcfc-4f8a-92a0-a591525329f2)
 
+## Testing the Accuracy of the Regression Model
+### Mean Absoulte Error (MAE)
+ In order to analyze how well the second Model predicted actual values, the MAE was calculated. The Second Model had an MAE of 289312.45. This number indicates that the average absoulte difference between the predicted house prices and the actual house prices is approximately $289,312.85.
+ ### Root Mean Squared Error for Residual (RMSE)
+ In this project RMSE was used as a metric to ass the goodness of fit of the second model by examining the errors of residuals. Residuals are the diffrences between observed values and perdicted values of the model. The RMSE for the second model was 438,022.17. This indicates that the average difference between the observed values and the predicted values of the second model is approximately $438,022.11.
 ## Second Model Created Using StatsModels
 
 In an effort to create a more impactful and statistically significant model, a second model was created using only the significant data (p<0.05) from the inital model. However, after running the second model through Multiple Linear Regression, the chart indicated that the model only accounted for 38% of the variance. The first model accounted for 39% of all variance, indicating that this model explains 1% kess of the variance in price. 
@@ -313,4 +318,14 @@ A Tornado chart was created for the second model, to visualize the impact of eac
 ### Mean Absoulte Error (MAE)
  In order to analyze how well the second Model predicted actual values, the MAE was calculated. The Second Model had an MAE of 290703.26. This number indicates that the average absoulte difference between the predicted house prices and the actual house prices is approximately $290,703.26.
  ### Root Mean Squared Error for Residual (RMSE)
- In this project RMSE was used as a metric to ass the goodness of fit of the second model by examining the errors of residuals. Residuals are the diffrences between observed values and perdicted values of the model. The RMSE for the second model was 440870.45. This indicates 
+ In this project RMSE was used as a metric to ass the goodness of fit of the second model by examining the errors of residuals. Residuals are the diffrences between observed values and perdicted values of the model. The RMSE for the second model was 440870.45. This indicates that the average difference between the observed values and the predicted values of the second model is approximately $440,870.45.
+
+## Homoscedasticity Testing
+To evaluate the second model's performance, a homoscedasticity test was conducted using the Seaborn and Matplotlib libraries. Homoscedasticity refers to the assumption that the variance of the residuals is constant across all levels of the independent variable.
+
+The plot below illustrates that the majority of the scatter plot is centered around the constant (0). This observation indicates that the assumption of homoscedasticity is met. Viewing the chart provides a clear visualization demonstrating that the variance of the residuals is consistent across all levels of the independent variable.
+
+Assessing whether the assumption of homoscedasticity is met is essential because if a model violates this assumption, it may indicate biased parameter estimates.
+
+![Screen Shot 2024-02-08 at 10 23 12 AM](https://github.com/jguzzo522/project2house/assets/75549456/e5e5315a-a722-4399-b3fe-3636b69d2d0b)
+
