@@ -339,3 +339,9 @@ Using Scipy.stats, Matplotlib, and Seaborn libraries, a histogram was created to
 ![Screen Shot 2024-02-08 at 11 20 34 AM](https://github.com/jguzzo522/project2house/assets/75549456/1c0886f0-1fc3-4fa3-af6b-c21f188b040f)
 
 This histogram displays the distribution of residuals. The Y-axis represents the frequency of residuals, and the X-axis represents the values of the residuals. The tails extend past ±2 standard deviations, but the bulk of the distribution falls within this range. The red line falls on the value 0, representing the mean of the residuals, indicating that, on average, the residuals are centered around 0. The blue line represents the standard deviation of the residuals. While the fitted normal distribution has a lower curve than the model's residual curve, a majority of the data falls within the normal distribution curve. The visualization demonstrates that the residuals are approximately normally distributed. 
+
+To further investigate the normality of the residuals of the second model, a Q-Q plot was created using the Spicy.stats library. A Q-Q plot displays the quantities of residuals against the quantities of a normal distribution.
+
+![Screen Shot 2024-02-08 at 11 44 36 AM](https://github.com/jguzzo522/project2house/assets/75549456/c4c3ce4c-8b72-4a8c-b056-891117766918)
+
+In the plot above, the blue line represents the model's residual line, while the red line indicates the expected normal distribution. The blue and red lines closely align in the central region where the bulk of the data falls. However, towards the tails of the distribution (±2 on the x-axis and ±1 on the y-axis), the blue line deviates slightly from the normal distribution. This deviation suggests a slight departure from normality, potentially caused by outliers in the data, which warrants further investigation. Nevertheless, the Q-Q plot indicates that this model generally exhibits a normal distribution of residuals.
