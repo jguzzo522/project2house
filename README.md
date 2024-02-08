@@ -329,3 +329,7 @@ Assessing whether the assumption of homoscedasticity is met is essential because
 
 ![Screen Shot 2024-02-08 at 10 23 12 AM](https://github.com/jguzzo522/project2house/assets/75549456/e5e5315a-a722-4399-b3fe-3636b69d2d0b)
 
+## Heteroscedasticity Testing
+To evaluate the second model's performance, a test for heteroscedasticity was performed using the Statsmodels library. This test, known as the Goldfeld-Quandt test, assesses heteroscedasticity in the residuals of the second model. When the variance of the model's residuals is not constant across all different levels of the independent variable, heteroscedasticity is present. The Goldfeld-Quandt test displays two values, the F-statistic and the p-value.
+
+Since this model had a p-value greater than 0.05, we fail to reject the null hypothesis. The F-statistic of 0.99 suggests that there is less evidence against the null hypothesis of homoscedasticity. This indicates that the variance of the errors is relatively consistent across the different coefficients. Therefore, we can assume that this model does not exhibit heteroscedasticity.
