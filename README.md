@@ -308,3 +308,9 @@ In an effort to create a more impactful and statistically significant model, a s
 
 A Tornado chart was created for the second model, to visualize the impact of each coefficient on the price of the house. Echoing the findings to the frist model, this model indicates that grade_11 and grade_12 have the highest impact on price. While grade_4, and grade_5, demonstrated the most pronounced adverse effects on price outcomes. The major diffrences between the two Models as demenstrated by the Tornado charts, are that there are less coefficents because they were removed becasue their p value was higher than p<0.05. 
 ![Screen Shot 2024-02-07 at 4 01 35 PM](https://github.com/jguzzo522/project2house/assets/75549456/9966999a-daac-4ee6-b791-a77f64653c4b)
+
+## Testing the Accuracy of the second Regression Model
+### Mean Absoulte Error (MAE)
+ In order to analyze how well the second Model predicted actual values, the MAE was calculated. The Second Model had an MAE of 290703.26. This number indicates that the average absoulte difference between the predicted house prices and the actual house prices is approximately $290,703.26.
+ ### Root Mean Squared Error for Residual (RMSE)
+ In this project RMSE was used as a metric to ass the goodness of fit of the second model by examining the errors of residuals. Residuals are the diffrences between observed values and perdicted values of the model. The RMSE for the second model was 440870.45. This indicates 
