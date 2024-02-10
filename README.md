@@ -293,18 +293,18 @@ This project was focused on increasing property value for homeowners though fact
 
 Utilizing StatsModels, a Multiple Linear Regression model was constructed to explore the relationship between various predictor variables and the target variable, which was set to 'Price', enabling the ability to analyze the relationship between multiple independent variables and a single dependent variable.
 
-The initial model accounted for approximately 39% of the variance in 'Price', suggesting a moderate level of explanatory power. There were many p-values associated with the coefficients that were statistically significant predictors (p < 0.05), indicating variables that have a significant effect on Price.
+The initial model accounted for approximately 39% of the variance in 'Price', suggesting a moderate level of explanatory power. There were many p-values associated with the coefficients that were statistically significant predictors (p < 0.05), indicating variables that have a more significant effect on 'Price'.
 
-The coefficients in the model represent the estimated change in Price for a one-unit change in the respective predictor variable. Interpretation of these coefficients provides insights into the direction and magnitude of the relationship between predictors and Price.
+The coefficients in the model represent the estimated change in 'Price' for a one-unit change in the respective predictor variable. Interpretation of these coefficients provide insights into the direction and magnitude of the relationship between predictors and 'Price'.
 
-After creating the initial model, a Tornado chart was generated through Matplotlib,to illustrate the influence of each coefficient on the house price. The chart reveals that an increase in the value of the variable 'grade_11 Excellent' has the most substantial positive effect on the price, indicating that houses with this grade experience a considerable price increase. Conversely, the presence of 'grade_4 Low' has the most pronounced negative impact on the price, suggesting that houses with this grade exhibit a substantial decrease in value. This visual representation underscores the importance of certain factors in determining house prices and provides valuable insights for homeowners.
+After creating the initial model, a Tornado chart was generated through Matplotlib to illustrate the influence of each coefficient on the house price. The chart reveals that an increase in the value of the variable 'grade_11 Excellent' has the most substantial positive effect on the price, indicating that houses with this grade experience a considerable price increase. Conversely, the presence of 'grade_4 Low' has the most pronounced negative impact on the price, suggesting that houses with this grade exhibit a substantial decrease in value. This visual representation underscores the importance of certain factors in determining house prices and provides valuable insights for homeowners.
 ![Screen Shot 2024-02-07 at 3 34 10 PM](https://github.com/jguzzo522/project2house/assets/75549456/97663077-fcfc-4f8a-92a0-a591525329f2)
 
 ## Testing the Accuracy of the Regression Model
 ### Mean Absoulte Error (MAE)
- In order to analyze how well the second Model predicted actual values, the MAE was calculated. The Second Model had an MAE of 289312.45. This number indicates that the average absoulte difference between the predicted house prices and the actual house prices is approximately $289,312.85.
+In order to analyze how well the first model predicted actual values, the MAE was calculated. The first Model had an MAE of 289312.45. This number indicates that the average absoulte difference between the predicted house prices and the actual house prices is approximately $289,312.85.
  ### Root Mean Squared Error for Residual (RMSE)
- In this project RMSE was used as a metric to ass the goodness of fit of the second model by examining the errors of residuals. Residuals are the diffrences between observed values and perdicted values of the model. The RMSE for the second model was 438,022.17. This indicates that the average difference between the observed values and the predicted values of the second model is approximately $438,022.11.
+ In this project RMSE was used as a metric to asses the goodness of fit of the first model by examining the errors of residuals. Residuals are the diffrences between observed values and perdicted values of the model. The RMSE for the second model was 438,022.17. This indicates that the average difference between the observed values and the predicted values of the second model is approximately $438,022.11.
 ## Second Model Created Using StatsModels
 
 In an effort to create a more impactful and statistically significant model, a second model was created using only the significant data (p<0.05) from the inital model. However, after running the second model through Multiple Linear Regression, the chart indicated that the model only accounted for 38% of the variance. The first model accounted for 39% of all variance, indicating that this model explains 1% kess of the variance in price. 
@@ -314,9 +314,9 @@ A Tornado chart was created for the second model, to visualize the impact of eac
 
 ## Testing the Accuracy of the second Regression Model
 ### Mean Absoulte Error (MAE)
- In order to analyze how well the second Model predicted actual values, the MAE was calculated. The Second Model had an MAE of 290703.26. This number indicates that the average absoulte difference between the predicted house prices and the actual house prices is approximately $290,703.26.
+ In order to analyze how well the second model predicted actual values, the MAE was calculated. The Second model had an MAE of 290703.26. This number indicates that the average absoulte difference between the predicted house prices and the actual house prices is approximately $290,703.26.
  ### Root Mean Squared Error for Residual (RMSE)
- In this project RMSE was used as a metric to ass the goodness of fit of the second model by examining the errors of residuals. Residuals are the diffrences between observed values and perdicted values of the model. The RMSE for the second model was 440870.45. This indicates that the average difference between the observed values and the predicted values of the second model is approximately $440,870.45.
+ In this project RMSE was used as a metric to asses the goodness of fit of the second model by examining the errors of residuals. Residuals are the diffrences between observed values and perdicted values of the model. The RMSE for the second model was 440870.45. This indicates that the average difference between the observed values and the predicted values of the second model is approximately $440,870.45.
 
 ## Homoscedasticity Testing
 To evaluate the second model's performance, a homoscedasticity test was conducted using the Seaborn and Matplotlib libraries. Homoscedasticity refers to the assumption that the variance of the residuals is constant across all levels of the independent variable.
