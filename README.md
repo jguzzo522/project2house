@@ -277,15 +277,13 @@ Dummy variables or binary variables were created for each of the categorical var
 
 ## Search and Removal of Outliers
 
-Utilizing Pandas, descriptive statistics were generated for each numeric variable to gain insights into their distributions and identify outliers. Based on these statistics, reasonable parameters were established, and outliers were subsequently removed from the dataset. Visualization of key statistical parameters such as the mean, standard deviation, and interquartile range was achieved using the Matplotlib library. This comprehensive approach ensured a thorough investigation of the data and facilitated informed decision-making in outlier handling. The below is an example of a visualiztion used to set outlier parameters for 'sqft_above'. Using the graph, as well as the discriptive statistics, the lower limit was set to 800 Sqft, and the upper limit was set to 3500 Sqft. Any data points falling outside of this range were determined to be outliers. 
+Utilizing Pandas library, descriptive statistics were generated for each numeric variable to gain insights into their distributions and identify outliers. Based on these statistics, parameters were established to remove outliers from the dataset. Visualization of key statistical parameters such as the mean, standard deviation, and interquartile range was achieved using the Matplotlib library. This comprehensive approach ensured a thorough investigation of the data and facilitated informed decision-making in outlier removal. 
+
+Below is an example of a visualization used to set outlier parameters for 'sqft_above'. Using the graph, as well as the descriptive statistics, the lower limit was set to 800 sqft, and the upper limit was set to 3500 sqft. Any data points falling outside of this range were determined to be outliers and removed. 
 
 ![Screen Shot 2024-02-07 at 3 06 03 PM](https://github.com/jguzzo522/project2house/assets/75549456/1ae0140f-aecd-49d4-9651-2554c9d68ea7)
 
-plt.legend()
-plt.xticks(rotation=45, ha='right')  # Rotate x-axis labels for better readability
-tick_positions = [0, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000]
-plt.xticks(tick_positions, rotation=45, ha='right')
-plt.show()
+
 
 ## Removal of Additional Columns
 
