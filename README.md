@@ -1,10 +1,10 @@
 # Increasing Property Value for Homeowners
 
 ## Goal
-This project is aimed at increasing property value for homeowners for the purpose of resale value. The measurement used to determine if property value was increased, was price. The data indicates that house grade, and the number of bathrooms are metrics that can be used to increase property value. 
+This project is aimed at increasing property value for homeowners for the purpose of resale value. Price was the measurement used to determine if property value increased. The data indicates that increasing house grade and the number of bathrooms are metrics that can be used to raise property value. 
 
 ## Data
-This project used data from a data set called ‘kc_house_data’. Pandas was used to import this dataset into Jupyter notebook. In this dataset there were twenty three columns. The information in these columns are provided below.
+This project used data from a data set called ‘kc_house_data’. Pandas library was used to import this dataset into Jupyter notebook. In this dataset there were twenty three columns. The information in these columns are provided below.
 
 <!DOCTYPE html>
 <html lang="en">
