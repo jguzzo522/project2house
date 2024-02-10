@@ -1,10 +1,10 @@
 # Increasing Property Value for Homeowners
 
 ## Goal
-This project is aimed at increasing property value for homeowners for the purpose of resale value. Price was the measurement used to determine if property value increased. The data indicates that increasing house grade and the number of bathrooms are metrics that can be used to raise property value. 
+This project is aimed at increasing property value for homeowners for the purpose of resale value. Using price as the measurement to determine property value, the data indicates that increasing the house grade and the number of bathrooms are metrics that can be used to raise overall property value. 
 
 ## Data
-This project used data from a data set called ‘kc_house_data’. Pandas library was used to import this dataset into Jupyter notebook. In this dataset there were twenty three columns. The information in these columns are provided below.
+This project used existing data from a data set called ‘kc_house_data’ (below). Pandas library was used to import this dataset into Jupyter notebook. Twenty three columns served as variables in the ‘kc_house_data’ dataset.
 
 <!DOCTYPE html>
 <html lang="en">
@@ -118,10 +118,10 @@ This project used data from a data set called ‘kc_house_data’. Pandas librar
 </body>
 </html>
 
-This data was analyzed, modeled, manipulated, computed, visualized, and plotted using many different library packages in python such as 'Statsmodels', 'Pandas', 'Numpy', 'OS', 'Matplotlib', 'Seaborn', ‘Sklearn, 'Spicy' and 'Arima'.
+This data was analyzed, modeled, manipulated, computed, visualized, and plotted using different library packages in Python such as 'Statsmodels', 'Pandas', 'Numpy', 'OS', 'Matplotlib', 'Seaborn', ‘Sklearn, 'Spicy' and 'Arima'.
 
 ## Cleaning the Data
-In this dataset there were a few columns that had duplicate values, or missing values. In order to properly analyze this dataset these rows were removed from the original dataset. Pre-cleaned data had 30,155 rows, after removing the missing or duplicate values, the dataset had 30,110 rows remaining. 
+In this dataset there were a few columns that had duplicate values, or missing values. In order to properly analyze this dataset these rows were removed from the original dataset. The pre-cleaned data initially had 30,155 rows, and after removing the missing or duplicate values, 30,110 rows remained. 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -133,7 +133,7 @@ In this dataset there were a few columns that had duplicate values, or missing v
 
 <h2>Creating Dummy Variables for Categorical Data</h1>
 
-In this project, several categorical variables such as 'condition', 'heat_source', 'renovation_status', 'grade', 'nuisance', and 'sewer_system' were present in the dataset. Statistical models typically require numerical input for interpretation and analysis. Therefore, in order to incorporate these categorical variables into the modeling process effectively, dummy variables were created using the Pandas library. 
+In this project, several __________ categorical variables such as 'condition', 'heat_source', 'renovation_status', 'grade', 'nuisance', and 'sewer_system' were present in the dataset. Statistical models typically require numerical input for interpretation and analysis. Therefore, in order to incorporate these categorical variables into the modeling process effectively, dummy variables were created using the Pandas library. 
 
 Dummy variables or binary variables were created for each of the categorical variables. These converted variables allows for statistical models to process the data appropriately, and allows for the user to make interpretation of the data's effect on the price of the home. 
 
