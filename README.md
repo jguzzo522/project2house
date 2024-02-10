@@ -287,13 +287,13 @@ Below is an example of a visualization used to set outlier parameters for 'sqft_
 
 ## Removal of Additional Columns
 
-This project was focused on increasing property value for homeowners though factors that homeowners could control. Consequently there were columns in the dataset such as Latitude, longitude, date, year built, year renovated, greenbelt, view, and waterfront, that were unrelated to this objective and therefore removed. 
+This project was focused on increasing property value for homeowners though factors that homeowners could control. Consequently, the columns in the dataset that were unrelated to this objective and removed included 'latitude', 'longitude', 'date', 'year built', 'year renovated', 'greenbelt', 'view', and 'waterfront'. 
 
 ## First Model Created Using StatsModels
 
-Utilizing StatsModels, a Multiple Linear Regression model was constructed to explore the relationship between various predictor variables and the target variable, which was set to Price. Multiple Linear Regression is a statistical technique used to analyze the relationship between multiple independent variables and a single dependent variable.
+Utilizing StatsModels, a Multiple Linear Regression model was constructed to explore the relationship between various predictor variables and the target variable, which was set to 'Price', enabling the ability to analyze the relationship between multiple independent variables and a single dependent variable.
 
-The initial model accounted for approximately 39% of the variance in Price, suggesting a moderate level of explanatory power. There were many p-values associated with the coefficients that were statistically significant predictors (p < 0.05), indicating variables that have a significant effect on Price.
+The initial model accounted for approximately 39% of the variance in 'Price', suggesting a moderate level of explanatory power. There were many p-values associated with the coefficients that were statistically significant predictors (p < 0.05), indicating variables that have a significant effect on Price.
 
 The coefficients in the model represent the estimated change in Price for a one-unit change in the respective predictor variable. Interpretation of these coefficients provides insights into the direction and magnitude of the relationship between predictors and Price.
 
