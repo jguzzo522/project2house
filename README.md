@@ -1,4 +1,4 @@
-# Increasing Property Value for Homeowners
+# Increasing Property Value for Homeowners based on analysis from Model 4
 
 ## Goal
 This project is aimed at increasing property value for homeowners for the purpose of resale value. Using price as the measurement to determine property value, the data indicates that increasing the house grade and the number of bathrooms are metrics that can be used to raise overall property value. 
@@ -131,11 +131,28 @@ In this dataset there were a few columns that had duplicate values, or missing v
 </head>
 <body>
 
-<h2>Creating Dummy Variables for Categorical Data</h1>
+<h2>Making Categorical Data Interpretable</h1>
 
-In this project, several __________ categorical variables such as 'condition', 'heat_source', 'renovation_status', 'grade', 'nuisance', and 'sewer_system' were present in the dataset. Statistical models typically require numerical input for interpretation and analysis. Therefore, in order to incorporate these categorical variables into the modeling process effectively, dummy variables were created using the Pandas library. 
+In this project, several categorical variables such as 'condition', 'heat_source', 'renovation_status', 'grade', 'nuisance', and 'sewer_system' were present in the dataset. Statistical models typically require numerical input for interpretation and analysis. Therefore, in order to incorporate these categorical variables into the modeling process effectively, dummy variables were created using the Pandas library.
 
-Dummy variables or binary variables were created for each of the categorical variables. These converted variables allows for statistical models to process the data appropriately, and allows for the user to make interpretation of the data's effect on the price of the home. 
+The process of creating dummy variables allows for categorical data to be classified as numerical data, assigning values of 0 if the variable is not present, or 1 if the variable is present. Once Dummy variables are created, the original variable is expanded into subcategories. For instance, after transforming the categorical column of  'nuisance' into a Dummy variable, the column splits into two separate columns, one labeled 'nuisance_NO' and one labeled 'nuisance_YES'. If a 'nuisance' is present in the house, a number one would be coded in the 'nuisance_yes' column, and a zero would be coded in the 'nuisance_NO' column.
+
+After transforming all categorical data into numerical data, the dataset had:
+
+Five new columns for 'condition'
+
+Seven new columns for 'heat_source'
+
+Two new columns for 'renovation_status'
+
+Thirteen new categories for 'grade'
+
+Two new columns for 'nuisance'
+
+Four new columns for 'sewer system'
+
+This process enabled the categorical data to be effectively utilized in statistical modeling and analysis.
+## Dummy Variables
 
 <table border="1">
     <tr>
@@ -161,6 +178,15 @@ Dummy variables or binary variables were created for each of the categorical var
     <tr>
         <td>condition_Very Good</td>
         <td>Dummy variable indicating if the house is in very good condition (related to maintenance)</td>
+    </tr>
+</table>
+
+### Heat Source Variables
+
+<table border="1">
+    <tr>
+        <th>Column</th>
+        <th>Description</th>
     </tr>
     <tr>
         <td>heat_source_Electricity</td>
@@ -190,6 +216,15 @@ Dummy variables or binary variables were created for each of the categorical var
         <td>heat_source_Other</td>
         <td>Dummy variable indicating if the heat source for the house is other</td>
     </tr>
+</table>
+
+### Renovation Status Variables
+
+<table border="1">
+    <tr>
+        <th>Column</th>
+        <th>Description</th>
+    </tr>
     <tr>
         <td>renovation_status_No Renovation</td>
         <td>Dummy variable indicating if the house has not been renovated</td>
@@ -197,6 +232,15 @@ Dummy variables or binary variables were created for each of the categorical var
     <tr>
         <td>renovation_status_Renovation</td>
         <td>Dummy variable indicating if the house has been renovated</td>
+    </tr>
+</table>
+
+### Grade Variables
+
+<table border="1">
+    <tr>
+        <th>Column</th>
+        <th>Description</th>
     </tr>
     <tr>
         <td>grade_2 Substandard</td>
@@ -246,6 +290,15 @@ Dummy variables or binary variables were created for each of the categorical var
         <td>grade_13 Mansion</td>
         <td>Dummy variable indicating if the house grade is 13 (Mansion)</td>
     </tr>
+</table>
+
+### Nuisance Variables
+
+<table border="1">
+    <tr>
+        <th>Column</th>
+        <th>Description</th>
+    </tr>
     <tr>
         <td>nuisance_NO</td>
         <td>Dummy variable indicating if the house has no recorded nuisances</td>
@@ -253,6 +306,15 @@ Dummy variables or binary variables were created for each of the categorical var
     <tr>
         <td>nuisance_YES</td>
         <td>Dummy variable indicating if the house has recorded nuisances</td>
+    </tr>
+</table>
+
+### Sewer System Variables
+
+<table border="1">
+    <tr>
+        <th>Column</th>
+        <th>Description</th>
     </tr>
     <tr>
         <td>sewer_system_PRIVATE</td>
@@ -272,33 +334,34 @@ Dummy variables or binary variables were created for each of the categorical var
     </tr>
 </table>
 
-</body>
-</html>
-
 ## Search and Removal of Outliers
 
-Utilizing Pandas library, descriptive statistics were generated for each numeric variable to gain insights into their distributions and identify outliers. Based on these statistics, parameters were established to remove outliers from the dataset. Visualization of key statistical parameters such as the mean, standard deviation, and interquartile range was achieved using the Matplotlib library. This comprehensive approach ensured a thorough investigation of the data and facilitated informed decision-making in outlier removal. 
+Utilizing Matplotlib and Seaborn, histogram's were generated for each numeric variable to gain insights into their distributions and identify outliers. Based on these graphs parameters were established to remove outliers from the dataset. Visualization of key statistical parameters such as the mean, standard deviation, and interquartile range was achieved using the Matplotlib library. This comprehensive approach ensured a thorough investigation of the data and facilitated informed decision-making in outlier removal. (See graph below)
 
-Below is an example of a visualization used to set outlier parameters for 'sqft_above'. Using the graph, as well as the descriptive statistics, the lower limit was set to 800 sqft, and the upper limit was set to 3500 sqft. Any data points falling outside of this range were determined to be outliers and removed. 
+The strategy for numerical variables involved focusing on the 5th and 95th percentiles of 'price', 'bedrooms', 'bathrooms', and 'floors'. This method aimed to minimize the influence of extreme outliers while preserving a significant portion of the dataset.
 
-![Screen Shot 2024-02-07 at 3 06 03 PM](https://github.com/jguzzo522/project2house/assets/75549456/1ae0140f-aecd-49d4-9651-2554c9d68ea7)
+When handling square footage ('sqft') variables, the approach was to preserve more values to prevent substantial data loss. Instead of removing the 5th and 95th percentiles, the focus was on the 2nd and 98th percentiles to accommodate extreme low and high values, respectively. This approach ensured that the full spectrum of variation in 'sqft' variables was captured while still addressing potential outliers at the distribution's extremes.
 
+The decision to prioritize the removal of extreme values for bedrooms, bathrooms, and floors was driven by their comparatively smaller value ranges, which exerted a more pronounced impact on price data. Similarly, focusing on the 95th percentile for price enabled the filtering out of the most extreme price outliers while retaining a significant portion of the dataset for analysis.
+
+![Screen Shot 2024-02-13 at 3 31 58 PM](https://github.com/jguzzo522/project2house/assets/75549456/03b350c0-2849-456e-9a3c-43cfd0af875d)
 
 
 ## Removal of Additional Columns
 
 This project was focused on increasing property value for homeowners though factors that homeowners could control. Consequently, the columns in the dataset that were unrelated to this objective and removed included 'latitude', 'longitude', 'date', 'year built', 'year renovated', 'greenbelt', 'view', and 'waterfront'. 
 
-## First Model Created Using StatsModels
+## Model 4 Created Using StatsModels
 
 Utilizing StatsModels, a Multiple Linear Regression model was constructed to explore the relationship between various predictor variables and the target variable, which was set to 'Price', enabling the ability to analyze the relationship between multiple independent variables and a single dependent variable.
 
-The initial model accounted for approximately 39% of the variance in 'Price', suggesting a moderate level of explanatory power. There were many p-values associated with the coefficients that were statistically significant predictors (p < 0.05), indicating variables that have a more significant effect on 'Price'.
+This model accounted for approximately 38% of the variance in 'Price', suggesting a moderate level of explanatory power. All p-values associated with the coefficients that were statistically significant predictors (p < 0.05), indicating that the corresponding coefficient is statistically significant at the 95% confidence level.
 
 The coefficients in the model represent the estimated change in 'Price' for a one-unit change in the respective predictor variable. Interpretation of these coefficients provide insights into the direction and magnitude of the relationship between predictors and 'Price'.
 
-After creating the initial model, a Tornado chart was generated through Matplotlib to illustrate the influence of each coefficient on the house price. The chart reveals that an increase in the value of the variable 'grade_11 Excellent' has the most substantial positive effect on the price, indicating that houses with this grade experience a considerable price increase. Conversely, the presence of 'grade_4 Low' has the most pronounced negative impact on the price, suggesting that houses with this grade exhibit a substantial decrease in value. This visual representation underscores the importance of certain factors in determining house prices and provides valuable insights for homeowners.
-![Screen Shot 2024-02-07 at 3 34 10 PM](https://github.com/jguzzo522/project2house/assets/75549456/97663077-fcfc-4f8a-92a0-a591525329f2)
+After creating model 4, a Tornado chart was generated through Matplotlib to illustrate the influence of each coefficient on the house price. The chart reveals that an increase in the value of the variable 'grade_12 Luxury' has the most substantial positive effect on the price, indicating that houses with this grade experience a considerable price increase. Conversely, the presence of 'grade_5 Fair' has the most pronounced negative impact on the price, suggesting that houses with this grade exhibit a substantial decrease in value. 
+![Screen Shot 2024-02-13 at 3 39 17 PM](https://github.com/jguzzo522/project2house/assets/75549456/ed1d9dfb-7b36-4b1c-9682-9d1f72da0279)
+
 
 ## Testing the Accuracy of the Regression Model
 ### Mean Absoulte Error (MAE)
