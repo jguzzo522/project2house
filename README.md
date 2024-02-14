@@ -336,9 +336,9 @@ This process enabled the categorical data to be effectively utilized in statisti
 
 ## Search and Removal of Outliers
 
-Utilizing Matplotlib and Seaborn, histogram's were generated for each numeric variable to gain insights into their distributions and identify outliers. Based on these graphs parameters were established to remove outliers from the dataset. Visualization of key statistical parameters such as the mean, standard deviation, and interquartile range was achieved using the Matplotlib library. This comprehensive approach ensured a thorough investigation of the data and facilitated informed decision-making in outlier removal. (See graph below)
+Utilizing Matplotlib and Seaborn, histograms were generated for each numeric variable to gain insights into their distributions and identify outliers. Based on these graphs parameters were established to remove outliers from the dataset. Visualization of key statistical parameters such as the mean, standard deviation, and interquartile range was achieved using the Matplotlib library. This comprehensive approach ensured a thorough investigation of the data and facilitated informed decision-making in outlier removal. (See graph below)
 
-The strategy for numerical variables involved focusing on the 5th and 95th percentiles of 'price', 'bedrooms', 'bathrooms', and 'floors'. This method aimed to minimize the influence of extreme outliers while preserving a significant portion of the dataset.
+The strategy for numerical variables involved focusing on the 5th through 95th percentiles of 'price', 'bedrooms', 'bathrooms', and 'floors'. This method aimed to minimize the influence of extreme outliers while preserving a significant portion of the dataset.
 
 When handling square footage ('sqft') variables, the approach was to preserve more values to prevent substantial data loss. Instead of removing the 5th and 95th percentiles, the focus was on the 2nd and 98th percentiles to accommodate extreme low and high values, respectively. This approach ensured that the full spectrum of variation in 'sqft' variables was captured while still addressing potential outliers at the distribution's extremes.
 
