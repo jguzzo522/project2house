@@ -344,6 +344,8 @@ When handling square footage ('sqft') variables, the approach was to preserve mo
 
 The decision to prioritize the removal of extreme values for bedrooms, bathrooms, and floors was driven by their comparatively smaller value ranges, which exerted a more pronounced impact on price data. Similarly, focusing on the 95th percentile for price enabled the filtering out of the most extreme price outliers while retaining a significant portion of the dataset for analysis.
 
+The integration of Matplotlib and Seaborn significantly facilitated the decision-making process. These visualization tools allowed for comprehensive exploration of the data, and swifter outlier removal. Using histograms allowed for insights into the data's patterns and irregularities, guiding the outlier removal strategy effectively. 
+
 ![Screen Shot 2024-02-13 at 3 31 58 PM](https://github.com/jguzzo522/project2house/assets/75549456/03b350c0-2849-456e-9a3c-43cfd0af875d)
 
 
@@ -368,18 +370,10 @@ After creating model 4, a Tornado chart was generated through Matplotlib to illu
 In order to analyze how well the first model predicted actual values, the MAE was calculated. The first Model had an MAE of 289312.45. This number indicates that the average absoulte difference between the predicted house prices and the actual house prices is approximately $289,312.85.
  ### Root Mean Squared Error for Residual (RMSE)
  In this project RMSE was used as a metric to asses the goodness of fit of the first model by examining the errors of residuals. Residuals are the diffrences between observed values and perdicted values of the model. The RMSE for the second model was 438,022.17. This indicates that the average difference between the observed values and the predicted values of the second model is approximately $438,022.11.
-## Second Model Created Using StatsModels
 
-In an effort to create a more impactful and statistically significant model, a second model was created using only the significant data (p<0.05) from the inital model. However, after running the second model through Multiple Linear Regression, the chart indicated that the model only accounted for 38% of the variance. The first model accounted for 39% of all variance, indicating that this model explains 1% kess of the variance in price. 
 
-A Tornado chart was created for the second model, to visualize the impact of each coefficient on the price of the house. Echoing the findings to the frist model, this model indicates that grade_11 and grade_12 have the highest impact on price. While grade_4, and grade_5, demonstrated the most pronounced adverse effects on price outcomes. The major diffrences between the two Models as demenstrated by the Tornado charts, are that there are less coefficents because they were removed becasue their p value was higher than p<0.05. 
-![Screen Shot 2024-02-07 at 4 01 35 PM](https://github.com/jguzzo522/project2house/assets/75549456/9966999a-daac-4ee6-b791-a77f64653c4b)
+## Testing the Accuracy of the Regression Model
 
-## Testing the Accuracy of the second Regression Model
-### Mean Absoulte Error (MAE)
- In order to analyze how well the second model predicted actual values, the MAE was calculated. The Second model had an MAE of 290703.26. This number indicates that the average absoulte difference between the predicted house prices and the actual house prices is approximately $290,703.26.
- ### Root Mean Squared Error for Residual (RMSE)
- In this project RMSE was used as a metric to asses the goodness of fit of the second model by examining the errors of residuals. Residuals are the diffrences between observed values and perdicted values of the model. The RMSE for the second model was 440870.45. This indicates that the average difference between the observed values and the predicted values of the second model is approximately $440,870.45.
 
 ## Homoscedasticity Testing
 To evaluate the second model's performance, a homoscedasticity test was conducted using the Seaborn and Matplotlib libraries. Homoscedasticity refers to the assumption that the variance of the residuals is constant across all levels of the independent variable.
