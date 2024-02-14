@@ -362,6 +362,7 @@ This model accounted for approximately 38% of the variance in 'Price', suggestin
 The coefficients in the model represent the estimated change in 'Price' for a one-unit change in the respective predictor variable. Interpretation of these coefficients provide insights into the direction and magnitude of the relationship between predictors and 'Price'.
 
 After creating model 4, a Tornado chart was generated through Matplotlib to illustrate the influence of each coefficient on the house price. The chart reveals that an increase in the value of the variable 'grade_12 Luxury' has the most substantial positive effect on the price, indicating that houses with this grade experience a considerable price increase. Conversely, the presence of 'grade_5 Fair' has the most pronounced negative impact on the price, suggesting that houses with this grade exhibit a substantial decrease in value. 
+
 ![Screen Shot 2024-02-13 at 3 39 17 PM](https://github.com/jguzzo522/project2house/assets/75549456/ed1d9dfb-7b36-4b1c-9682-9d1f72da0279)
 
 
@@ -372,9 +373,45 @@ In order to analyze how well this predicted actual values, the MAE was calculate
  In this project RMSE was used as a metric to asses the goodness of fit of the model by examining the errors of residuals. Residuals are the diffrences between observed values and perdicted values of the model. The RMSE for this model was 342,533.59. This indicates that the average difference between the observed values and the predicted values of the second model is approximately $342,533.59.
 
 
-## Testing the Accuracy of the Regression Model
+# Testing the Accuracy of the Regression Model
 
 
 ## Homoscedasticity Testing
 To assess homoscedasticity in the model, a Q-Q plot was generated using Seaborn and Matplotlib libraries. The plot, with the blue line representing model residuals and the red line indicating the expected normal distribution, closely follows the red line across the range, suggesting the residuals are normally distributed. This confirms homoscedasticity, ensuring the model's reliability. Violating homoscedasticity can lead to biased parameter estimates, making this evaluation crucial for accurate predictions. The confirmation of homoscedasticity enhances the credibility of the model's predictions and the validity of statistical inferences.
 ![Screen Shot 2024-02-13 at 8 56 28 PM](https://github.com/jguzzo522/project2house/assets/75549456/f4bd091e-ac6e-4b12-a91c-9e6001061709)
+
+## Evaluating the Coefficents of Model 4
+
+## Grade
+
+After confirming that Model 4 was the best of the four multiple linear regression models, investigation into which coefficients were most important continued. By reviewing the OLS chart and the Tornado chart, it was decided that 'grade' and 'bathrooms' would be useful measures to increase price and therefore resale value.
+
+The chart below demonstrates the importance of 'grade' on 'price'. In this bar graph created below, it reveals that only three grades have a positive impact on price: 'grade_9 Better', 'grade_10 Very Good', and 'grade_11 Excellent', increase the price of the house. This tells homeowners that if they want to increase home value, they must improve upon their house grade.
+
+The data also indicates that having a grade below 9 is detrimental to home price. Homeowners will want to avoid having a house grade of 8 or below if they are hoping to increase resale value.
+
+![Screen Shot 2024-02-13 at 9 41 50 PM](https://github.com/jguzzo522/project2house/assets/75549456/fdcb5065-d2de-4298-8d1f-32c20e3c33bc)
+
+## Bathrooms
+
+To explore the influence of 'bathrooms' on 'price', a bar chart was constructed. The x-axis represents the different numbers of bathrooms, while the y-axis indicates the corresponding 'price' (USD).
+
+The chart clearly illustrates a positive correlation between the number of bathrooms and the price of the house. As homeowners add additional bathrooms, there is a noticeable increase in the price of the property. Notably, it's crucial to mention that according to the insights derived from Model 4, homes with more than 3.5 bathrooms were considered outliers and thus excluded from the analysis.
+
+Based on the findings from the chart and the data analysis conducted using Model 4, it's evident that increasing the number of bathrooms in a home can significantly enhance its price. This observation underscores a strong correlation between the number of bathrooms and the resulting price of the property.
+
+This analysis provides valuable insights for homeowners seeking to boost their property value. By recognizing the substantial impact of 'bathrooms' on 'price', homeowners can strategically invest in upgrading or adding bathrooms to their homes, thereby potentially increasing their resale value and overall attractiveness in the real estate market.
+
+![Screen Shot 2024-02-13 at 9 51 56 PM](https://github.com/jguzzo522/project2house/assets/75549456/d1f3870f-864f-4279-b26e-fe39777aeeef)
+
+## Recommendations and Further Investigation
+It is recommended that homeowners increase the grade of their house to at least 9 if they would like to enhance resale value. Additionally, it is advisable for homeowners to consider increasing the number of bathrooms in their home. According to the model, for each additional bathroom, there is a predicted increase in price of $19,740. The model suggests that the ideal number of bathrooms is 4.
+
+Further investigation of this dataset could involve delving deeper into various variables and adjusting parameters for analysis. For example, the Kings County housing data includes many homes without any bedrooms. It might have been more appropriate to analyze studios and 1-bedroom houses separately, instead of solely focusing on the traditional 2-bedroom-plus houses. This refined analysis could offer valuable insights for individuals looking to enhance the value of their studio and 1-bedroom homes.
+
+Additionally, further analysis could explore homes without patios, garages, or basements, as these variables were significant in the models. While outliers with extremely low square footage and extremely high square footage in these categories were eliminated, investigating the financial implications for homeowners without garages, patios, or basements could yield unexpected results. Understanding the potential financial benefits of adding these features through home renovations could be valuable for homeowners considering such investments.
+
+
+
+
+
