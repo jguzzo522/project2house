@@ -367,7 +367,7 @@ After creating model 4, a Tornado chart was generated through Matplotlib to illu
 
 
 ## Testing the Accuracy of the Regression Model
-### Mean Absoulte Error (MAE)
+### Mean Absolute Error (MAE)
 In order to analyze how well this predicted actual values, the MAE was calculated. This Model had an MAE of 266,610.52. This number indicates that the average absoulte difference between the predicted house prices and the actual house prices is approximately $266,610.52.
  ### Root Mean Squared Error for Residual (RMSE)
  In this project RMSE was used as a metric to asses the goodness of fit of the model by examining the errors of residuals. Residuals are the diffrences between observed values and perdicted values of the model. The RMSE for this model was 342,533.59. This indicates that the average difference between the observed values and the predicted values of the second model is approximately $342,533.59.
