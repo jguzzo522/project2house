@@ -367,22 +367,19 @@ After creating model 4, a Tornado chart was generated through Matplotlib to illu
 
 ## Testing the Accuracy of the Regression Model
 ### Mean Absoulte Error (MAE)
-In order to analyze how well the first model predicted actual values, the MAE was calculated. The first Model had an MAE of 289312.45. This number indicates that the average absoulte difference between the predicted house prices and the actual house prices is approximately $289,312.85.
+In order to analyze how well this predicted actual values, the MAE was calculated. This Model had an MAE of 266,610.52. This number indicates that the average absoulte difference between the predicted house prices and the actual house prices is approximately $266,610.52.
  ### Root Mean Squared Error for Residual (RMSE)
- In this project RMSE was used as a metric to asses the goodness of fit of the first model by examining the errors of residuals. Residuals are the diffrences between observed values and perdicted values of the model. The RMSE for the second model was 438,022.17. This indicates that the average difference between the observed values and the predicted values of the second model is approximately $438,022.11.
+ In this project RMSE was used as a metric to asses the goodness of fit of the model by examining the errors of residuals. Residuals are the diffrences between observed values and perdicted values of the model. The RMSE for this model was 342,533.59. This indicates that the average difference between the observed values and the predicted values of the second model is approximately $342,533.59.
 
 
 ## Testing the Accuracy of the Regression Model
 
 
 ## Homoscedasticity Testing
-To evaluate the second model's performance, a homoscedasticity test was conducted using the Seaborn and Matplotlib libraries. Homoscedasticity refers to the assumption that the variance of the residuals is constant across all levels of the independent variable.
+To assess homoscedasticity in the model, a Q-Q plot was generated using Seaborn and Matplotlib libraries. The plot, with the blue line representing model residuals and the red line indicating the expected normal distribution, closely follows the red line across the range, suggesting the residuals are normally distributed. This confirms homoscedasticity, ensuring the model's reliability. Violating homoscedasticity can lead to biased parameter estimates, making this evaluation crucial for accurate predictions. The confirmation of homoscedasticity enhances the credibility of the model's predictions and the validity of statistical inferences.
+![Screen Shot 2024-02-13 at 8 56 28 PM](https://github.com/jguzzo522/project2house/assets/75549456/f4bd091e-ac6e-4b12-a91c-9e6001061709)
 
-The plot below illustrates that the majority of the scatter plot is centered around the constant (0). This observation indicates that the assumption of homoscedasticity is met. Viewing the chart provides a clear visualization demonstrating that the variance of the residuals is consistent across all levels of the independent variable.
 
-Assessing whether the assumption of homoscedasticity is met is essential because if a model violates this assumption, it may indicate biased parameter estimates.
-
-![Screen Shot 2024-02-08 at 10 23 12 AM](https://github.com/jguzzo522/project2house/assets/75549456/e5e5315a-a722-4399-b3fe-3636b69d2d0b)
 
 ## Heteroscedasticity Testing
 To evaluate the second model's performance, a test for heteroscedasticity was performed using the Statsmodels library. This test, known as the Goldfeld-Quandt test, assesses heteroscedasticity in the residuals of the second model. When the variance of the model's residuals is not constant across all different levels of the independent variable, heteroscedasticity is present. The Goldfeld-Quandt test displays two values, the F-statistic and the p-value.
