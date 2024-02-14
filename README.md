@@ -387,9 +387,8 @@ To assess homoscedasticity in the model, a Q-Q plot was generated using Seaborn 
 
 After confirming that Model 4 was the best of the four multiple linear regression models, investigation into which coefficients were most important continued. By reviewing the OLS chart and the Tornado chart, it was decided that 'grade' and 'bathrooms' would be useful measures to increase price and therefore resale value.
 
-The chart below demonstrates the importance of 'grade' on 'price'. In this bar graph created below, it reveals that only three grades have a positive impact on price: 'grade_9 Better', 'grade_10 Very Good', and 'grade_11 Excellent', increase the price of the house. This tells homeowners that if they want to increase home value, they must improve upon their house grade.
+The chart below demonstrates the importance of 'grade' on 'price'. In this bar graph created below, it reveals that only three grades have a positive impact on price: 'grade_9 Better', 'grade_10 Very Good', and 'grade_11 Excellent', increase the price of the house. This tells homeowners with a grade of 8 or below, that if they want to increase their home value, they should improve upon their home grade.
 
-The data also indicates that having a grade below 9 is detrimental to home price. Homeowners will want to avoid having a house grade of 8 or below if they are hoping to increase resale value.
 
 ![Screen Shot 2024-02-13 at 9 41 50 PM](https://github.com/jguzzo522/project2house/assets/75549456/fdcb5065-d2de-4298-8d1f-32c20e3c33bc)
 
