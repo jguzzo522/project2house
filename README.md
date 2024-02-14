@@ -378,14 +378,3 @@ In order to analyze how well this predicted actual values, the MAE was calculate
 ## Homoscedasticity Testing
 To assess homoscedasticity in the model, a Q-Q plot was generated using Seaborn and Matplotlib libraries. The plot, with the blue line representing model residuals and the red line indicating the expected normal distribution, closely follows the red line across the range, suggesting the residuals are normally distributed. This confirms homoscedasticity, ensuring the model's reliability. Violating homoscedasticity can lead to biased parameter estimates, making this evaluation crucial for accurate predictions. The confirmation of homoscedasticity enhances the credibility of the model's predictions and the validity of statistical inferences.
 ![Screen Shot 2024-02-13 at 8 56 28 PM](https://github.com/jguzzo522/project2house/assets/75549456/f4bd091e-ac6e-4b12-a91c-9e6001061709)
-
-## Heteroscedasticity Testing
-To evaluate the second model's performance, a test for heteroscedasticity was performed using the Statsmodels library. This test, known as the Goldfeld-Quandt test, assesses heteroscedasticity in the residuals of the second model. When the variance of the model's residuals is not constant across all different levels of the independent variable, heteroscedasticity is present. The Goldfeld-Quandt test displays two values, the F-statistic and the p-value.
-
-Since this model had a p-value greater than 0.05, we fail to reject the null hypothesis. The F-statistic of 0.99 suggests that there is less evidence against the null hypothesis of homoscedasticity. This indicates that the variance of the errors is relatively consistent across the different coefficients. Therefore, we can assume that this model does not exhibit heteroscedasticity.
-
-
-
-![Screen Shot 2024-02-08 at 11 44 36 AM](https://github.com/jguzzo522/project2house/assets/75549456/c4c3ce4c-8b72-4a8c-b056-891117766918)
-
-In the plot above, the blue line represents the model's residual line, while the red line indicates the expected normal distribution. The blue and red lines closely align in the central region where the bulk of the data falls. However, towards the tails of the distribution (±2 on the x-axis and ±1 on the y-axis), the blue line deviates slightly from the normal distribution. This deviation suggests a slight departure from normality, potentially caused by outliers in the data, which warrants further investigation. Nevertheless, the Q-Q plot indicates that this model generally exhibits a normal distribution of residuals.
