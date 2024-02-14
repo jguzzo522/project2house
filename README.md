@@ -379,20 +379,12 @@ In order to analyze how well this predicted actual values, the MAE was calculate
 To assess homoscedasticity in the model, a Q-Q plot was generated using Seaborn and Matplotlib libraries. The plot, with the blue line representing model residuals and the red line indicating the expected normal distribution, closely follows the red line across the range, suggesting the residuals are normally distributed. This confirms homoscedasticity, ensuring the model's reliability. Violating homoscedasticity can lead to biased parameter estimates, making this evaluation crucial for accurate predictions. The confirmation of homoscedasticity enhances the credibility of the model's predictions and the validity of statistical inferences.
 ![Screen Shot 2024-02-13 at 8 56 28 PM](https://github.com/jguzzo522/project2house/assets/75549456/f4bd091e-ac6e-4b12-a91c-9e6001061709)
 
-
-
 ## Heteroscedasticity Testing
 To evaluate the second model's performance, a test for heteroscedasticity was performed using the Statsmodels library. This test, known as the Goldfeld-Quandt test, assesses heteroscedasticity in the residuals of the second model. When the variance of the model's residuals is not constant across all different levels of the independent variable, heteroscedasticity is present. The Goldfeld-Quandt test displays two values, the F-statistic and the p-value.
 
 Since this model had a p-value greater than 0.05, we fail to reject the null hypothesis. The F-statistic of 0.99 suggests that there is less evidence against the null hypothesis of homoscedasticity. This indicates that the variance of the errors is relatively consistent across the different coefficients. Therefore, we can assume that this model does not exhibit heteroscedasticity.
 
-## Visualization of Residuals
-Using Scipy.stats, Matplotlib, and Seaborn libraries, a histogram was created to visualize the residuals of the second model. The purpose of this histogram was to assess whether the residuals follow a normal distribution, an important assumption for statistical models. The chart below demonstrates that this model's residuals do indeed follow a normal distribution.
-![Screen Shot 2024-02-08 at 11 20 34 AM](https://github.com/jguzzo522/project2house/assets/75549456/1c0886f0-1fc3-4fa3-af6b-c21f188b040f)
 
-This histogram displays the distribution of residuals. The Y-axis represents the frequency of residuals, and the X-axis represents the values of the residuals. The tails extend past ±2 standard deviations, but the bulk of the distribution falls within this range. The red line falls on the value 0, representing the mean of the residuals, indicating that, on average, the residuals are centered around 0. The blue line represents the standard deviation of the residuals. While the fitted normal distribution has a lower curve than the model's residual curve, a majority of the data falls within the normal distribution curve. The visualization demonstrates that the residuals are approximately normally distributed. 
-
-To further investigate the normality of the residuals of the second model, a Q-Q plot was created using the Spicy.stats library. A Q-Q plot displays the quantities of residuals against the quantities of a normal distribution.
 
 ![Screen Shot 2024-02-08 at 11 44 36 AM](https://github.com/jguzzo522/project2house/assets/75549456/c4c3ce4c-8b72-4a8c-b056-891117766918)
 
