@@ -377,7 +377,8 @@ In order to analyze how well this predicted actual values, the MAE was calculate
 
 
 ## Homoscedasticity Testing
-To assess homoscedasticity in the model, a Q-Q plot was generated using Seaborn and Matplotlib libraries. The plot, with the blue line representing model residuals and the red line indicating the expected normal distribution, closely follows the red line across the range, suggesting the residuals are normally distributed. This confirms homoscedasticity, ensuring the model's reliability. Violating homoscedasticity can lead to biased parameter estimates, making this evaluation crucial for accurate predictions. The confirmation of homoscedasticity enhances the credibility of the model's predictions and the validity of statistical inferences.
+To assess homoscedasticity in the model, a Q-Q plot was generated using Seaborn and Matplotlib libraries. In this Q-Q plot, the blue line represents the model residuals while the red line represents the expected normal distribution. It can be observed that the blue line closely follows the red line across the range, suggesting that the model residuals are normally distributed. This confirms homoscedasticity, ensuring the model's reliability. Violating homoscedasticity can lead to biased parameter estimates, making this evaluation crucial for accurate predictions. The confirmation of homoscedasticity enhances the credibility of the model's predictions and the validity of statistical inferences.
+
 ![Screen Shot 2024-02-13 at 8 56 28 PM](https://github.com/jguzzo522/project2house/assets/75549456/f4bd091e-ac6e-4b12-a91c-9e6001061709)
 
 ## Evaluating the Coefficents of Model 4
