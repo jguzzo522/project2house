@@ -419,7 +419,8 @@ Jessica Guzzo
 Student 
 JGuzzo522@gmail.com
 
-[housepj2.pdf](https://github.com/jguzzo522/project2house/files/14290746/housepj2.pdf)
+[presentation.pdf](https://github.com/jguzzo522/project2house/files/14291069/presentation.pdf)
+
 
 
 
