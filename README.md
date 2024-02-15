@@ -6,6 +6,9 @@ This project is aimed at increasing property value for homeowners for the purpos
 ## Data
 This project used existing data from a data set called ‘kc_house_data’ (below). Pandas library was used to import this dataset into Jupyter notebook. Twenty-three columns served as variables in the ‘kc_house_data’ dataset.
 
+The dataset is obtained from [Kaggle](https://www.kaggle.com/datasets/shivachandel/kc-house-data/data).
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
