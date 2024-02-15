@@ -411,6 +411,12 @@ Further investigation of this dataset could involve delving deeper into various 
 
 Additionally, further analysis could explore homes without patios, garages, or basements, as these variables were significant in the models. While outliers with extremely low square footage and extremely high square footage in these categories were eliminated, investigating the financial implications for homeowners without garages, patios, or basements could yield unexpected results. Understanding the potential financial benefits of adding these features through home renovations could be valuable for homeowners considering such investments.
 
+## Contact Info
+Jessica Guzzo
+Student 
+JGuzzo522@gmail.com
+
+[housepj2.pdf](https://github.com/jguzzo522/project2house/files/14290746/housepj2.pdf)
 
 
 
